@@ -31,7 +31,7 @@ void TAMC_GT911::reset() {
   setResolution(width, height);
 }
 void TAMC_GT911::calculateChecksum() {
-  uint8_t checksum;
+  uint8_t checksum = 0;
   for (uint8_t i=0; i<GT911_CONFIG_SIZE; i++) {
     checksum += configBuf[i];
   }
